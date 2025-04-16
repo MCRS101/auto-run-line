@@ -2,7 +2,7 @@ name: Auto-run
 
 on:
   schedule:
-    - cron: '12 3 * * *'       # รันทุกวันเวลา 10:12 ไทย (UTC 03:12)
+    - cron: '20 3 * * *'
   workflow_dispatch:
 jobs:
   run-script:
@@ -24,5 +24,4 @@ jobs:
       - name: Run script
         env:
           LINE_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
-        run: |
-          python main.py
+        run: python main.py
