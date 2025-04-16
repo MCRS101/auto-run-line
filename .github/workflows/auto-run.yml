@@ -3,7 +3,7 @@ name: Auto-run
 on:
   schedule:
     - cron: '12 3 * * *'       # รันทุกวันเวลา 10:12 ไทย (UTC 03:12)
-
+  workflow_dispatch:
 jobs:
   run-script:
     runs-on: ubuntu-latest
