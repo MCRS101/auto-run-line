@@ -2,7 +2,7 @@ name: Auto-run
 
 on:
   schedule:
-    - cron: '0 3 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
+    - cron: '50 2 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
   workflow_dispatch:           # ให้กดรันเองได้ด้วย
 
 jobs:
