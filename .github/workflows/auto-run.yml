@@ -1,8 +1,8 @@
-name: Daily Python Schedule
+name: auto-run-line
 
 on:
   schedule:
-    - cron: '22 2 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
+    - cron: '30 2 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
   workflow_dispatch:           # ให้กดรันเองได้ด้วย
 
 jobs:
