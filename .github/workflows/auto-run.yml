@@ -2,7 +2,7 @@ name: Daily Python Schedule
 
 on:
   schedule:
-    - cron: '0 23 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
+    - cron: '18 2 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
   workflow_dispatch:           # ให้กดรันเองได้ด้วย
 
 jobs:
