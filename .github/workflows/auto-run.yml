@@ -1,16 +1,16 @@
-name: Run Python script daily
+name: Daily Python Schedule
 
 on:
   schedule:
-    - cron: '0 23 * * *'  # ทุกวัน 07:00 UTC (หรือ 14:00 ไทย)
-  workflow_dispatch:  # กดรันเองก็ได้
+    - cron: '0 23 * * *'       # 06:00 ไทย (23:00 UTC ของวันก่อน)
+  workflow_dispatch:           # ให้กดรันเองได้ด้วย
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -23,5 +23,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
+        env:
+          LINE_ACCESS_TOKEN: ${{ secrets.LINE_ACCESS_TOKEN }}
         run: |
           python main.py
